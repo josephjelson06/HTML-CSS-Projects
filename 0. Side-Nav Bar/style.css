@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+  background: url("photo.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+/* Hamburger Nav Button */
+.btn_one {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  transition: all 0.2s linear;
+}
+
+.sidebar_menu {
+  position: fixed;
+  left: -350px;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Apna College Anchor Logo */
+.sidebar_menu .logo a {
+  position: absolute;
+  left: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Cross Button */
+.sidebar_menu .btn_two i {
+  color: grey;
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 275px;
+  opacity: 0;
+   cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+/* all icons and lists in the menu body*/
+.sidebar_menu .menu {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+/* affecting the list menu list options */
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+/* targetting all the anchor and icon elements of menu*/
+.sidebar_menu .menu i,
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* targetting the icons of menu*/
+.sidebar_menu .menu i {
+  padding-right: 8px;
+}
+
+/* targetting the social media in general */
+.sidebar_menu .social_media {
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  left: 25%;
+  bottom: 50px;
+}
+
+/* targetting the social media icons*/
+.sidebar_menu .social_media i {
+  color: white;
+  opacity: 0.5;
+  padding: 0 5px;
+}
+
+/*hiding the check box*/
+#check {
+  display: none;
+}
+
+/*creating a hover effect for the list elements of menu of sidebar_menu*/
+.sidebar_menu .menu li:hover {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/*Increasing the size of nav-bar button while hovering*/
+.btn_one i:hover {
+  font-size: 40px;
+}
+
+/*Increasing the size of cross button while hovering*/
+.btn_two i:hover {
+  font-size: 30px;
+}
+
+/*Increasing the scale and opacity of social media icons*/
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/*show the sidebar_menu when checked*/
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+
+/*hiding the nav-bar button when checked*/
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+
+/*showing the cross button when checked*/
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}
